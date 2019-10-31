@@ -22,15 +22,6 @@
 
 
 /* General Flex Styles */
-@media only screen and (max-width: 480px){
-
-}
-@media only screen and (min-width: 481px){
-
-}
-@media only screen and (min-width: 769px){
-
-}
 body{
    display: -webkit-flex;
    display: flex;
@@ -56,7 +47,7 @@ section.tips aside{
 }
 nav.horizontal ul{
    display: flex;
-   orientation: column;
+   flex-flow: column;
    flex-wrap: wrap;
 }
 
@@ -69,9 +60,9 @@ nav.horizontal ul{
    ===============================
 */
 @media only screen and (max-width: 480px){
-   ul{
+   nav.vertical ul{
       display: flex;
-      orientation: column;
+      flex-flow: column;
       flex-wrap: wrap;
       height: 240px;
    }
@@ -81,7 +72,17 @@ nav.horizontal ul{
    footer{
       order: 100;
    }
+   a#navicon{
+      display: block;
+   }
+   nav.horizontal ul{
+      display: none;
+   }
+   a#navicon:hover+ul, nav.horizontal ul:hover{
+      display: block;
+   }   
 }
+
 
 
 
@@ -90,6 +91,15 @@ nav.horizontal ul{
 	Tablet and Desktop Devices: 481px or more 
    ============================================
 */
-
+@media only screen and (min-width: 481px){
+   nav.horizontal ul{
+      height: 160px;
+   }
+}
+@media only screen and (min-width: 769px){
+   nav.horizontal ul{
+      height: 160px;
+   }
+}
 
 
